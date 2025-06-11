@@ -9,14 +9,23 @@ Open your terminal and run:
 
  🔍 Verify After Running
 ---------------------------------------------------
-Timer status check:
+✅ Step 2: Check Timer Status
 
     systemctl status clean-docker-logs.timer
 
-Next scheduled cleanup dekhne ke liye:
 
-    systemctl list-timers | grep clean-docker-logs
+✅ Step 3: Check Last Run Status of the Service
+
+    systemctl status drosera-logs-cleaner.service
     
-Manual start karne ke liye:
+✅ Step 4: Confirm the Timer is Scheduled
 
-    sudo systemctl start clean-docker-logs.service
+    systemctl list-timers | grep drosera
+    
+✅ Step 5: (Optional) Run the Cleanup Script Manually
+
+    sudo systemctl start drosera-logs-cleaner.service
+    
+✅ Step 6: (Optional) Ensure Auto-Start on Boot
+
+    sudo systemctl enable --now drosera-logs-cleaner.timer
