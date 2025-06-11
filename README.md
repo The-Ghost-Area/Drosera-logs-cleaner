@@ -17,6 +17,6 @@ Next scheduled cleanup dekhne ke liye:
 
     systemctl list-timers | grep clean-docker-logs
     
-Manual test karne ke liye:
+Manual start karne ke liye:
 
     sudo systemctl start clean-docker-logs.service
